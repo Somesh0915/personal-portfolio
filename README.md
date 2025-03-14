@@ -23,7 +23,7 @@ A clean, responsive, and fully functional **personal portfolio website** showcas
 
 | Home (Hero)        | About Me        | Projects        |
 |--------------------|-----------------|-----------------|
-| ![Hero Screenshot](screenshots/hero.png) | ![About Screenshot](screenshots/about.png) | ![Projects Screenshot](screenshots/projects.png) |
+| ![Hero Screenshot](screenshots/hero.png) | ![About Screenshot](screenshots/about.png) | ![Projects Screenshot]
 
 ---
 
