@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   downloadResumeButton.addEventListener("click", () => {
     // Provide the correct path to your resume PDF file
-    const resumeUrl = "assets/Resume.pdf";
+    const resumeUrl = "Resume.pdf";
 
     // Create a temporary link to trigger download
     const link = document.createElement("a");
