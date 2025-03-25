@@ -3,94 +3,232 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="assets/js/script.js"></script>
+    <title>Someshkumar's Portfolio</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: "Poppins", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f8ff;
+        color: #333;
+        text-align: center;
+      }
+
+      /* Header */
+      header {
+        background: #4caf50;
+        color: white;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 8px 15px;
+        border-radius: 5px;
+      }
+
+      nav a:hover,
+      nav a.active {
+        background: rgba(255, 255, 255, 0.2);
+        text-decoration: underline;
+      }
+
+      /* Sections */
+      section {
+        padding: 100px 20px;
+        margin: 100px auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+        width: 80%;
+      }
+
+      /* Profile Picture */
+      .profile-pic {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        margin: 20px auto;
+        display: block;
+        border: 4px solid #4caf50;
+      }
+
+      /* Skills List */
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        font-size: 1.1rem;
+        background: #e3f2fd;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        display: inline-block;
+      }
+
+      /* Buttons */
+      button,
+      .download {
+        padding: 12px 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+
+      button:hover,
+      .download:hover {
+        background-color: #0056b3;
+      }
+
+      /* Resume Preview */
+      iframe {
+        width: 80%;
+        height: 500px;
+        border: 1px solid #ddd;
+        margin-top: 15px;
+        display: none;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        font-size: 0.9rem;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        nav a {
+          display: block;
+          padding: 10px;
+          text-align: center;
+        }
+
+        section {
+          width: 95%;
+        }
+      }
+    </style>
   </head>
   <body>
+    <!-- Header -->
     <header>
-      <nav class="container">
-        <ul class="nav-links">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#resume">Resume</a></li>
-        </ul>
+      <h1>Someshkumar's Portfolio</h1>
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
       </nav>
     </header>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Hi, I'm Someshkumar, Student </p>
-      <a href="#projects" class="button-primary">View My Work</a>
+
+    <!-- Profile Section -->
+    <section id="profile">
+      <img
+        src="profile.jpg"
+        alt="Someshkumar's Profile Picture"
+        class="profile-pic"
+      />
+      <h2>Someshkumar</h2>
+      <p>B.Sc Computer Science with Data Analytics | Tech Enthusiast</p>
     </section>
-    <!-- About Me Section -->
-    <section id="about" class="section about">
+
+    <!-- About Section -->
+    <section id="about">
       <h2>About Me</h2>
-      <img src="assets/profile.jpg" alt="Profile Picture" />
       <p>
-        I'm passionate a Bachelor of Science in Computer Science with Data Analytics at SNMV CAS
+        I'm Someshkumar, a Computer Science student passionate about web
+        development, data analytics, and problem-solving.
       </p>
     </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>SNMV College of Arts and Science</strong></p>
+      <p>Bachelor's Degree in Computer Science with Data Analytics</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML,CSS,JavaScript</li>
+        <li>MySQL & Database Management</li>
+        <li>Excel & Data Analysis</li>
+        <li>Python</li>
+        <li>Git & GitHub</li>
+        <li>Web Development & UI/UX</li>
+      </ul>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="section projects">
+    <section id="projects">
       <h2>Projects</h2>
-      <div class="project-card">
-        <img src="assets/project1.jpg" alt="Project 2" />
-        <div class="project-card-content">
-          <h3>Project One</h3>
-          <p>A Fully Functional Website of Automated E-Fine System</p>
-        </div>
-      </div>
+      <ul>
+        <li>
+          <strong>Automed E-Fine System:</strong> An automated system for
+          managing and issuing traffic fines efficiently.
+        </li>
+      </ul>
     </section>
-    <section id="skills" class="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-container">
-          <!-- Skill 1 -->
-          <div class="skill-box">
-            <h3>HTML, CSS & JavaScript</h3>
-          </div>
-          <!-- Skill 2 -->
-          <div class="skill-box">
-            <h3>Ethical Hacking</h3>
-          </div>
-          <!-- Skill 3 -->
-          <div class="skill-box">
-            <h3>Coding & Problem Solving</h3>
-          </div>
-          <!-- Skill 4 -->
-          <div class="skill-box">
-            <h3>Python Programming</h3>
-          </div>
-          <!-- Skill 5 -->
-          <div class="skill-box">
-            <h3>Networking</h3>
-          </div>
-          <!-- Skill 6 -->
-          <div class="skill-box">
-            <h3>Java</h3>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!-- Resume Section -->
-    <section id="resume" class="section resume">
+    <section id="resume">
       <h2>Resume</h2>
-      <p>You can view and download my resume below:</p>
-      <button id="downloadResume" class="button-primary">
-        Download Resume
-      </button>
+      <button onclick="toggleResume()">View Resume</button>
+      <a href="Someshkumar_resume.pdf" download class="download"
+        >Download Resume</a
+      >
+      <iframe id="resumePreview" src="Someshkumar_resume.pdf"></iframe>
     </section>
+
     <!-- Footer -->
     <footer>
-      <div class="container">
-        <p>&copy; 2025 Someshkumar. All rights reserved.</p>
-      </div>
+      <p>© 2025 Someshkumar. All Rights Reserved.</p>
     </footer>
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script>
+      function toggleResume() {
+        let iframe = document.getElementById("resumePreview");
+        if (iframe.style.display === "none") {
+          iframe.style.display = "block";
+        } else {
+          iframe.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
